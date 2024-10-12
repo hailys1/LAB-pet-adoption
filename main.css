@@ -1,0 +1,44 @@
+#petApp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  row-gap: 50px
+  column-gap: 20px
+}
+
+
+.card-body {
+  border: 2px solid rgb(218, 212, 212);
+}
+
+.cat {
+  background-color: rgb(152, 182, 224) !important;
+  color: black !important;
+}
+
+
+.dog {
+  background-color: rgb(171, 237, 193) !important;
+  color: black !important;
+}
+
+.dino {
+  background-color: rgb(237, 188, 171) !important;
+  color: black !important;
+}
+
+.all {
+  background-color: rgb(171, 180, 237) !important;
+  color: black !important;
+}
+
+.all-buttons {
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.name-title{
+  border: 1px !important;
+}

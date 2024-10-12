@@ -240,3 +240,76 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+// 1. setting location
+  const Targethtml = document.querySelector("#petApp")
+
+// 2. Empty string and making funtion for filter
+const cardsOnDom =(array) => {
+
+  let domString = "";
+for (const pet of array) {
+
+  domString += 
+  `<div class="card" style="width: 30rem;">
+ 
+  <div class="card-body">
+    <h5 class="name-title">${pet.name}</h5>
+    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+    <p class="type-color">${pet.color}</p>
+    <p class="special-text">${pet.specialSkill}</p>
+    <p class="type-text">${pet.type}</p>
+  </div>
+</div>`;
+}
+
+// 3. 1 + 2 populating set location with our string
+Targethtml.innerHTML = domString;
+};
+
+// will display all animals when page loads
+
+cardsOnDom(pets) 
+// FILTER FOR BUTTONS
+// make a filter
+const filter = (array, petType) => {
+  const petArray = [];
+  for (const member of array) {
+    if (member.type === petType) {
+      petArray.push(member);
+    }
+  }
+
+  return petArray;
+};
+
+// cardsOnDom(pets)
+// connect html buttons to js 2
+const catButton = document.querySelector("#cat");
+const dogButton = document.querySelector("#dog");
+const dinoButton = document.querySelector("#dino");
+const allButton = document.querySelector("#all");
+
+// 1 + 2 use event listener so when they click button, we trigger step
+// show all button
+
+allButton.addEventListener("click", () => {
+  cardsOnDom(pets);
+});
+
+// filter button
+
+catButton.addEventListener("click", () => {
+  const catMembers = filter(pets, "cat");
+  cardsOnDom(catMembers);
+});
+
+dogButton.addEventListener("click", () => {
+  const dogMembers = filter(pets, "dog");
+  cardsOnDom(dogMembers);
+});
+
+dinoButton.addEventListener("click", () => {
+  const dinoMembers = filter(pets, "dino");
+  cardsOnDom(dinoMembers);
+});
