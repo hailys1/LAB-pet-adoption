@@ -16,6 +16,33 @@
     <button class="btn btn-primary dino" id="dino">Dino</button>
     <button class="btn btn-primary all" id="all">Show all</button>
 </div>
+
+<!-- This is the form -->
+<form>
+  <div class="mb-3">
+    <label for="exampleInputName" class="form-label">Name</label>
+    <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="ex: Daisy" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPetColor" class="form-label">Color</label>
+    <input type="pet-color" class="form-control" id="pet-color" placeholder="ex: Black" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputSpecialSkill" class="form-label">Special Skill</label>
+    <input type="special-skill" class="form-control" id="special-skill" placeholder="ex: Can play dead" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputType" class="form-label">Type</label>
+    <input type="type" class="form-control" id="type" placeholder="ex: Dog" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputImageUrl" class="form-label">Photo of your pet</label>
+    <input type="imageUrl" class="form-control" id="imageUrl" placeholder="Upload image here" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
 <!-- this is connected to const Targethtml = document.querySelector("#petApp") -->
   <div id ="petApp">  </div>
 
